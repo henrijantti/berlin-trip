@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#111216">
+<meta property="og:title" content="Berlin · 25–27 September 2026">
+<meta property="og:description" content="The plan and The Invitational — seven challenges, €700 exposure, reputation the highest stake on the table.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2712%27 fill=%27%23111216%27/%3E%3Ctext x=%2732%27 y=%2744%27 font-family=%27Georgia,serif%27 font-size=%2736%27 font-weight=%27700%27 fill=%27%23d8b06a%27 text-anchor=%27middle%27%3EB%3C/text%3E%3C/svg%3E">
 <title>Berlin · 25–27 September 2026</title>
 <meta name="description" content="Boys' weekend Berlin, 25–27 September 2026. The plan — Generali 5K, Vabali, Michelin star, Maxxim — and The Berlin Invitational: seven challenges, €700 exposure, reputation on the line.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -601,13 +605,6 @@
     margin-bottom: 10px;
   }
 
-  .roster-hint {
-    text-align: center;
-    font-size: 12.5px;
-    color: var(--text-mute);
-    font-style: italic;
-    margin-bottom: 18px;
-  }
 
   .attr-key {
     display: flex;
@@ -1232,7 +1229,6 @@
 <!-- ════ THE ROSTER ════ -->
 <section class="roster">
   <h2 class="roster-title">The Competitors</h2>
-  <p class="roster-hint">Enter results as they land — kg, reps, % or m:ss. The page rules instantly; the scorer keeps the book.<br>Fight art: one house style, five portraits — drop <code>photos/01-henri.jpg</code> … <code>photos/05-juuso.jpg</code> beside this file.</p>
 
   <div class="attr-key" aria-label="Scouting attribute definitions">
     <span><b>Strength</b> iron moved — the №2–3 lifts</span>
@@ -1312,7 +1308,7 @@
     <div class="fighter-foot">
       <div class="trainer-note">
         <b>Trainer's note</b>
-        Strong on paper, which is fitting, because paper is where most of the training happened. Avoids the deadlift like it owes him money. Dangerous over one mile if the pacing spreadsheet survives contact with reality.
+        Strong on paper, which is fitting, because paper is where most of the training happened. Avoids the deadlift like it owes him money. Dangerous over one mile if the pacing data survives contact with reality.
       </div>
       <div class="odds"><b>3/1</b><span>To win Berlin</span></div>
       <p class="quote">"I've already simulated this weekend 400 times. We lose twice."<small>— declared statement, under oath</small></p>
@@ -1946,7 +1942,7 @@
     if (setHash !== false) {
       try { history.replaceState(null, '', '#' + id); } catch (e) {}
     }
-    window.scrollTo(0, 0);
+    try { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); } catch (e) { window.scrollTo(0, 0); }
   }
   btns.forEach(function(b) {
     b.addEventListener('click', function() { show(b.getAttribute('data-tab')); });
